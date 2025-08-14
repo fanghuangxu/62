@@ -12,7 +12,7 @@ code = """
 <body>
     <div class="student-profile">
         <h1>翁馨尧</h1>
-        <img src="../icons/students/1.jpg" alt="head image">
+        <img src="https://bgithub.xyz/fanghuangxu/62/raw/refs/heads/main/icons/students/1.jpg" alt="head image">
         <p>名字: 翁馨尧</p>
         <p>座号: 1</p>
         <div class="contact">
