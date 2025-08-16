@@ -7,6 +7,7 @@ template = """
     <title>{name}</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="..\styles\students.css">
+    <link rel="icon" href="https://bgithub.xyz/fanghuangxu/62/raw/refs/heads/main/icons/icon/fe43525e778ed14a76bd691e3cd8c807.png" type="image/png">
 </head>
 
 <body>
@@ -28,12 +29,12 @@ names = open("scripts/names_out.txt","r").readlines()
 
 for x in range(59):
     with open(f"students/{x+1}.html", "w", encoding="utf-8") as f:
-        name = names[x]
-        number = x+1
+        name = str(names[x]).replace("\n","")
+        number = str(x+1).replace("\n","")
         wechat = "None"
         qq = "None"
         email = "None"
-        f.write(str(template.format(name=name, number=number, wechat=wechat, qq=qq, email=email)).replace("\n",""))
+        f.write(str(template.format(name=name, number=number, wechat=wechat, qq=qq, email=email)).replace("",""))
         f.close()
 
 import os
