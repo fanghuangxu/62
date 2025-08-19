@@ -1,0 +1,55 @@
+/* styles/.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://bgithub.xyz/fanghuangxu/62/raw/refs/heads/main/icons/images/bg2.jpg'); /* 添加背景图片 */
+    background-size: cover; /* 使背景图片覆盖整个区域 */
+    background-repeat: no-repeat; /* 防止背景图片重复 */
+}
+
+.student-profile {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.student-profile h1 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.student-profile img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.student-profile p {
+    margin: 5px 0;
+}
+
+.student-profile .contact {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.larger-image {
+    width: 200px;
+    height: 200px;
+}
+
+.student-profile img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
