@@ -14,16 +14,15 @@ int main(int argc, char* argv[]) {
     string command = argv[1];
     // 输出每个命令行参数
     if(command == "init"){
-        cout << "正在克隆仓库..." << "\n";
-        int result = std::system("git clone https://bgithub.xyz/fanghuangxu/62.git");
+        int result = std::system("git clone https;//bgithub.xyz/fanghuangxu/62.git && cd 62 && del /f /s /q .git && rm -rf .git && git init");
         if (result == 0) {
-            cout << "克隆成功！" << "\n";
+            cout << "初始化成功！" << "\n";
         } else {
-            cout << "克隆失败！" << "\n";
+            cout << "初始化失败！" << "\n";
         }
     }else if(command == "pull"){
         cout << "正在拉取仓库..." << "\n";
-        int result = std::system("cd 62 && git pull");
+        int result = std::system("git pull");
         if (result == 0) {
             cout << "拉取成功！" << "\n";
         } else {
@@ -31,7 +30,7 @@ int main(int argc, char* argv[]) {
         }
     }else if(command == "push"){
         cout << "正在推送仓库..." << "\n";
-        int result = std::system("cd 62 && git push");
+        int result = std::system("git push");
         if (result == 0) {
             cout << "推送成功！" << "\n";
         } else {
@@ -39,7 +38,7 @@ int main(int argc, char* argv[]) {
         }
     }else if(command == "edit"){
         cout << "正在打开编辑器..." << "\n";
-        int result = std::system("code 62");
+        int result = std::system("code .");
         if (result == 0) {
             cout << "打开成功！" << "\n";
         } else {
