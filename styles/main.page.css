@@ -140,9 +140,79 @@ section h2 {
     text-decoration: underline;
 }
 
+.student-matrix {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.student-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.student-row a {
+    margin-right: 20px;
+}
+
+/* 定义悬停时的动画 */
+.student-row a:hover {
+    animation: hoverAnimation 0.3s forwards;
+}
+
+/* 定义移开时的动画 */
+.student-row a:after {
+    content: '';
+    display: block;
+    animation: leaveAnimation 0.3s forwards;
+}
+
+/* 定义按下时的动画 */
+.student-row a:active {
+    animation: activeAnimation 0.3s forwards;
+}
+
+/* 悬停动画效果 */
+@keyframes hoverAnimation {
+    from {
+        transform: scale(1);
+        color: #000;
+    }
+    to {
+        transform: scale(1.1);
+        color: #3498db; /* 悬停时改变颜色 */
+    }
+}
+
+/* 移开动画效果 */
+@keyframes leaveAnimation {
+    from {
+        transform: scale(1.1);
+        color: #3498db;
+    }
+    to {
+        transform: scale(1);
+        color: #000;
+    }
+}
+
+/* 按下动画效果 */
+@keyframes activeAnimation {
+    from {
+        transform: scale(1.1);
+        color: #3498db;
+    }
+    to {
+        transform: scale(0.9);
+        color: #e74c3c; /* 按下时改变颜色 */
+    }
+}
+
+
 
 /*老师*/
-/* 同学留言样式 */
 #teachers form {
     display: flex;
     flex-direction: column;
@@ -187,4 +257,67 @@ section h2 {
 
 #teachers a:hover {
     text-decoration: underline;
+}
+
+/*others*/
+#photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#photos img {
+    width: 200px; /* 设置图片的宽度 */
+    height: 200px; /* 设置图片的高度 */
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+#photos img:hover {
+    transform: scale(1.1); /* 设置放大效果 */
+}
+
+/* 模态框背景 */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed; /* 固定定位 */
+    z-index: 1; /* 确保在最上层 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* 半透明背景 */
+}
+
+/* 模态框内容 */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    transition: transform 0.5s ease; /* 动画效果 */
+    transform: scale(0); /* 初始状态为缩小 */
+}
+
+/* 打开模态框时的动画效果 */
+.modal.open .modal-content {
+    transform: scale(1); /* 放大到正常大小 */
+}
+
+/* 关闭按钮 */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
