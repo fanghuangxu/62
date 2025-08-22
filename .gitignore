@@ -2,5 +2,10 @@
 !.gitignore
 !.gitattributes
 !.github
+!.vscode
+!命令行工具/
 
-命令行工具/
+命令行工具\wpf\62CommandTools\bin\Debug\*
+命令行工具\wpf\62CommandTools\bin\Release\*
+命令行工具\wpf\62CommandTools\obj\Debug\*
+命令行工具\wpf\62CommandTools\obj\Release\*

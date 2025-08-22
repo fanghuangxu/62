@@ -1,0 +1,20 @@
+﻿<Window x:Class="_62CommandTools.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_62CommandTools"
+        mc:Ignorable="d"
+        Title="DevTools - MainPage" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="746*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Margin="316,42,371,372" RenderTransformOrigin="-0.167,-0.449" Grid.Column="1">DevTools</TextBox>
+        <Button Margin="0,128,636,201" Click="Button_Click" Grid.Column="1">克隆仓库</Button>
+        <Button Margin="158,128,309,201" Click="Button_Click_1" Grid.Column="1">生成私密（以便访问Github仓库）</Button>
+        <Button Margin="497,131,105,201" Click="Button_Click_2" Grid.Column="1">使用vscode编辑</Button>
+
+    </Grid>
+</Window>
