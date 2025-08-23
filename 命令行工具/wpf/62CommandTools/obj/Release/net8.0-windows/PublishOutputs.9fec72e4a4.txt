@@ -1,0 +1,5 @@
+E:\62纪念\命令行工具\publish\62CommandTools.exe
+E:\62纪念\命令行工具\publish\62CommandTools.dll
+E:\62纪念\命令行工具\publish\62CommandTools.deps.json
+E:\62纪念\命令行工具\publish\62CommandTools.runtimeconfig.json
+E:\62纪念\命令行工具\publish\62CommandTools.pdb

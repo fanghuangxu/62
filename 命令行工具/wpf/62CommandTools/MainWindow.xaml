@@ -15,6 +15,7 @@
         <Button Margin="0,128,636,201" Click="Button_Click" Grid.Column="1">克隆仓库</Button>
         <Button Margin="158,128,309,201" Click="Button_Click_1" Grid.Column="1">生成私密（以便访问Github仓库）</Button>
         <Button Margin="497,131,105,201" Click="Button_Click_2" Grid.Column="1">使用vscode编辑</Button>
-
+        <Button Margin="0,269,448,85" Grid.Column="1" Click="Button_Click_3">上传到Github</Button>
+        <Button Grid.Column="1" Margin="332,269,105,85" Click="Button_Click_4">更新本地仓库</Button>
     </Grid>
 </Window>

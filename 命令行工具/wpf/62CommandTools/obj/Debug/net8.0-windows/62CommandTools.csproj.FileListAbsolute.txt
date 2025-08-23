@@ -2,6 +2,8 @@ E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\MainWind
 E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\App.g.cs
 E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\62CommandTools_MarkupCompile.cache
 E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\62CommandTools_MarkupCompile.lref
+E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\62CommandTools.dll
+E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\62CommandTools.pdb
 E:\62纪念\命令行工具\wpf\62CommandTools\bin\Debug\net8.0-windows\62CommandTools.exe
 E:\62纪念\命令行工具\wpf\62CommandTools\bin\Debug\net8.0-windows\62CommandTools.deps.json
 E:\62纪念\命令行工具\wpf\62CommandTools\bin\Debug\net8.0-windows\62CommandTools.runtimeconfig.json
@@ -14,8 +16,6 @@ E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\62Comman
 E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\62CommandTools.AssemblyInfo.cs
 E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\62CommandTools.csproj.CoreCompileInputs.cache
 E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\62CommandTools.sourcelink.json
-E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\62CommandTools.dll
 E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\refint\62CommandTools.dll
-E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\62CommandTools.pdb
 E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\62CommandTools.genruntimeconfig.cache
 E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\ref\62CommandTools.dll
