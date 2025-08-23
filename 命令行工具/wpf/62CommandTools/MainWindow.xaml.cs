@@ -72,5 +72,11 @@ git push -u origin main
             Process.Start("cmd.exe", "cd " + userDirectory + "\\62 && git pull");
             MessageBox.Show("已成功拉取远程仓库最新代码。");
         }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            Window1 window1 = new Window1();
+            window1.Show();
+        }
     }
 }

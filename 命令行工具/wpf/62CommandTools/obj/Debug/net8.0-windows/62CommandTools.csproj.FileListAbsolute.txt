@@ -19,3 +19,5 @@ E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\62Comman
 E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\refint\62CommandTools.dll
 E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\62CommandTools.genruntimeconfig.cache
 E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\ref\62CommandTools.dll
+E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\Window1.g.cs
+E:\62纪念\命令行工具\wpf\62CommandTools\obj\Debug\net8.0-windows\Window1.baml

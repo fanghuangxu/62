@@ -3,4 +3,9 @@
   <PropertyGroup>
     <_LastSelectedProfileId>E:\62纪念\命令行工具\wpf\62CommandTools\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Window1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>
