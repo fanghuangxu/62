@@ -261,9 +261,11 @@ section h2 {
 
 /*others*/
 #photos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    border-radius: 8px;
+    margin: 5px;
+    max-width: 100%;
+    height: auto;
+    justify-content: space-between;
 }
 
 #photos img {
