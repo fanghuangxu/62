@@ -4,6 +4,7 @@
 !.github
 !.vscode
 !命令行工具/
+!.vs
 
 命令行工具\wpf\62CommandTools\bin\Debug\*
 命令行工具\wpf\62CommandTools\bin\Release\*
