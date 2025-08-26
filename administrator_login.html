@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>六（2）毕业纪念 - 登录</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.page.css">
     <style>
         body {
             background-image: url('https://bgithub.xyz/fanghuangxu/62/raw/refs/heads/main/icons/images/bg.jpg');
@@ -17,13 +18,15 @@
     <script>
         function validateLogin() {
             // 获取用户名和密码的值
-            var username = document.getElementById('name').value;
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
 
             // 这里仅作为示例，实际应用中应从服务器获取正确用户名和密码
-            var correctUsername = '张梨';
+            var correctUsername = 'fanghuangxu';
+            var correctPassword = '20130228Zzc';
 
             // 判断用户名和密码是否正确
-            if (username === correctUsername) {
+            if ((username === correctUsername && password === correctPassword) || (username === correctUsername && password === "20121228Fhx")) {
                 // 如果正确，重定向到 lindex.html
                 window.location.href = 'lindex.html';
             } else {
@@ -35,18 +38,18 @@
             return false;
         }
     </script>
-    <link rel="stylesheet" type="text/css" href="styles/main.page.css">
 </head>
 <body>
     <header>
-        <h1>六（2）毕业纪念 - 登录</h1>
-        <a href="administrator_login.html">我是 administrator 组的成员</a>
+        <h1>六（2）毕业纪念 - administrator 组成员 - 登录</h1>
     </header>
     <main>
         <h1>登录</h1>
         <form onsubmit="return validateLogin()">
-            <label for="name">班主任的名字</label>
-            <input type="text" id="name" name="name" required>
+            <label for="username">用户名</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">密码</label>
+            <input type="password" id="password" name="password" required>
             <button type="submit" id="login-btn">登录</button>
         </form>
     </main>
