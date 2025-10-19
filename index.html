@@ -8,49 +8,124 @@
         body {
             background-image: url('https://bgithub.xyz/fanghuangxu/62/raw/refs/heads/main/icons/images/bg.jpg');
             background-size: cover;
-            /* 使背景图片覆盖整个页面 */
             background-repeat: no-repeat;
-            /* 防止背景图片重复 */
             background-attachment: fixed;
-            /* 使背景图片固定，不随页面滚动 */
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px dashed #fff;
+            padding-bottom: 2px;
+            transition: all 0.3s ease;
+        }
+
+        header a:hover {
+            color: #f0f0f0;
+            border-bottom: 1px solid #fff;
+        }
+
+        main {
+            max-width: 400px;
+            margin: 2rem auto;
+            padding: 2.5rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        main h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        label {
+            color: #555;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            display: block;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 0.9rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #6b8eae;
+            box-shadow: 0 0 0 3px rgba(107, 142, 174, 0.2);
+        }
+
+        button[type="submit"] {
+            background-color: #4a6fa5;
+            color: white;
+            border: none;
+            padding: 0.9rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #3a5a8c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(58, 90, 140, 0.3);
+        }
+
+        button[type="submit"]:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(58, 90, 140, 0.2);
         }
     </style>
     <script>
         async function hashString(message) {
-            const msgBuffer = new TextEncoder().encode(message); // 将字符串编码为Uint8Array
-            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer); // 计算哈希
-            const hashArray = Array.from(new Uint8Array(hashBuffer)); // 将Buffer转换为数组
-            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // 将字节数组转换为十六进制字符串
+            const msgBuffer = new TextEncoder().encode(message);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
             return hashHex;
         }
 
-
-
         async function validateLogin() {
-            // 获取用户名的值
             var username = document.getElementById('name').value;
-
-            // 这里仅作为示例，实际应用中应从服务器获取正确用户名和密码
             var correctUsername = "688c6aa87034aa2dbffb6a00ddcb3e1342de0a12ca33320827dbf174e7604964";
-
-            // 计算输入用户名的哈希值
             const usernameHash = await hashString(username);
 
-            // 判断用户名是否正确
             if (usernameHash === correctUsername) {
-                // 如果正确，重定向到 lindex.html
                 window.location.href = 'lindex.html';
             } else {
-                // 如果不正确，提示错误信息
                 alert('用户名或密码错误，请重试。\nname:' + usernameHash);
             }
-
-            // 阻止表单的默认提交行为
             return false;
         }
-
     </script>
-    <link rel="stylesheet" type="text/css" href="styles/main.page.css">
 </head>
 
 <body>
