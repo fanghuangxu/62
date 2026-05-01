@@ -3,16 +3,228 @@
     <head>
         <title>开发者</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="..\styles\main.page.css">
         <link rel="icon" href="https://cdn.gh-proxy.org/https://github.com/fanghuangxu/62/raw/refs/heads/main/icons/icon/dev.png" type="image/png">
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #f4f4f9;
+                color: #333;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 100vh;
+                background-image: url('https://gh-proxy.org/https://github.com/fanghuangxu/62/raw/refs/heads/main/icons/images/bg.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+            header {
+                background-color: rgba(173, 216, 230, 0.228);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                color: #fff;
+                width: 100%;
+                padding: 15px 20px;
+                text-align: center;
+                box-shadow: 0 2px 10px rgba(173, 216, 230, 0.1);
+            }
+
+            header h1 {
+                margin: 0;
+                font-size: 28px;
+                color: #333;
+            }
+
+            main {
+                width: 80%;
+                max-width: 800px;
+                margin: 40px 0;
+                padding: 20px;
+            }
+
+            section {
+                background-color: #fff;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                margin-bottom: 25px;
+            }
+
+            section h1 {
+                color: #007bff;
+                margin-bottom: 20px;
+                border-bottom: 3px solid #007bff;
+                padding-bottom: 12px;
+                font-size: 24px;
+            }
+
+            section h2 {
+                color: #007bff;
+                margin-top: 25px;
+                margin-bottom: 20px;
+                font-size: 18px;
+                position: relative;
+                padding-left: 20px;
+            }
+
+            section h2::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 4px;
+                height: 20px;
+                background-color: #007bff;
+                border-radius: 2px;
+            }
+
+            section p {
+                line-height: 1.8;
+                margin-bottom: 18px;
+                font-size: 15px;
+            }
+
+            .inline-link {
+                color: #007bff;
+                text-decoration: none;
+                font-weight: 600;
+                border-bottom: 2px solid transparent;
+                transition: all 0.3s ease;
+            }
+
+            .inline-link:hover {
+                border-bottom-color: #007bff;
+                color: #0056b3;
+            }
+
+            .btn-link {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 14px 24px;
+                margin: 12px 0;
+                background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+                min-width: 200px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .btn-link::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+                transition: left 0.5s ease;
+            }
+
+            .btn-link:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+            }
+
+            .btn-link:hover::before {
+                left: 100%;
+            }
+
+            .btn-link i {
+                margin-right: 10px;
+                font-size: 16px;
+            }
+
+            .btn-link.secondary {
+                background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+                box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+            }
+
+            .btn-link.secondary:hover {
+                box-shadow: 0 8px 25px rgba(108, 117, 125, 0.4);
+            }
+
+            .btn-link.github {
+                background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            }
+
+            .btn-link.github:hover {
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            }
+
+            .link-group {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .tech-stack {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 15px;
+            }
+
+            .tech-badge {
+                display: inline-block;
+                padding: 6px 14px;
+                background-color: #e3f2fd;
+                color: #1976d2;
+                border-radius: 20px;
+                font-size: 13px;
+                font-weight: 500;
+                border: 1px solid #bbdefb;
+                transition: all 0.3s ease;
+            }
+
+            .tech-badge:hover {
+                background-color: #bbdefb;
+                transform: scale(1.05);
+            }
+        </style>
     </head>
     <body>
-        <h1>开发者</h1>
-        <p>本站由<a href="https://github.com/fanghuangxu">fanghuangxu</a>开发，使用<a href="https://github.com/fanghuangxu/62">Github</a>进行版本控制。</p>
-        <p>本站使用<a href="https://www.w3.org/TR/html5/">HTML5</a>、<a href="https://www.w3.org/TR/css-2011/">CSS3</a>、<a href="https://www.javascript.com/">JavaScript</a>编写，使用<a href="https://www.python.org/">Python</a>进行服务器端编程。</p>
-        <h2>为我们做贡献</h2>
-        <a href="dev/toolDownload.html">下载 62 网站命令行工具</a>
-        <a href="https://cdn.gh-proxy.org/https://github.com/fanghuangxu/62/archive/refs/heads/main.zip">下载网站源代码（推荐使用命令行工具进行代码编写）</a>
-        <a href="code.visualstudio.com">使用 Visual Studio Code 进行网站代码编写(必须下载否则命令行工具无法使用)</a>
+        <header>
+            <h1>六（2）毕业纪念 - 开发者</h1>
+        </header>
+        <main>
+            <section>
+                <h1>👨‍💻 开发者信息</h1>
+                <p>本站由 <a href="https://github.com/fanghuangxu" class="inline-link">fanghuangxu</a> 开发，使用 <a href="https://github.com/fanghuangxu/62" class="inline-link">GitHub</a> 进行版本控制。</p>
+                
+                <h2>技术栈</h2>
+                <p>本站使用以下技术构建：</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">HTML5</span>
+                    <span class="tech-badge">CSS3</span>
+                    <span class="tech-badge">JavaScript</span>
+                </div>
+            </section>
+
+            <section>
+                <h1>🤝 为我们做贡献</h1>
+                <div class="link-group">
+                    <a href="dev/toolDownload.html" class="btn-link">
+                        <span>📦</span> 下载 62 网站命令行工具
+                    </a>
+                    <a href="https://cdn.gh-proxy.org/https://github.com/fanghuangxu/62/archive/refs/heads/main.zip" class="btn-link github">
+                        <span>📥</span> 下载网站源代码
+                    </a>
+                    <a href="https://code.visualstudio.com" class="btn-link secondary" target="_blank">
+                        <span>💻</span> 使用 Visual Studio Code
+                    </a>
+                </div>
+            </section>
+        </main>
     </body>
 </html>
