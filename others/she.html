@@ -19,7 +19,6 @@
         <div class="contact">
             <code id="random-text"></code>
         </div>
-        <button id="change-message" class="romantic-button">换个消息</button>
     </div>
     <script>
         const messages = [
@@ -42,7 +41,6 @@
         ];
 
         const randomTextElement = document.getElementById("random-text");
-        const changeMessageButton = document.getElementById("change-message");
 
         function renderRomanticText(text) {
             randomTextElement.innerHTML = "";
@@ -61,24 +59,21 @@
                     const charSpan = document.createElement("span");
                     charSpan.className = "romantic-char";
                     charSpan.textContent = char;
-                    charSpan.style.animationDelay = `${charIndex * 0.08}s`; /* 文字出现间隔缩短，更流畅 */
+                    charSpan.style.animationDelay = `${charIndex * 0.08}s`;
                     randomTextElement.appendChild(charSpan);
                     charIndex++;
                 }
             });
         }
 
-        // 显示随机消息
-        const randomIndex = Math.floor(Math.random() * messages.length);
-        let randomMessage = messages[randomIndex];
-        renderRomanticText(randomMessage);
-
-        // 按钮点击事件
-        changeMessageButton.addEventListener("click", () => {
+        function showRandomMessage() {
             const randomIndex = Math.floor(Math.random() * messages.length);
-            randomMessage = messages[randomIndex];
+            const randomMessage = messages[randomIndex];
             renderRomanticText(randomMessage);
-        });
+        }
+
+        showRandomMessage();
+        setInterval(showRandomMessage, 10000);
 
     </script>
 </body>
